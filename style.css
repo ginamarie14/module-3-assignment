@@ -88,9 +88,15 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
+/*button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}*/
+
+.btn:hover{
+  background-color: white;
+  color: hsl(360, 91%, 36%);
+  border: 1px solid hsl(360, 91%, 36%);
 }
 
 .float-right {
