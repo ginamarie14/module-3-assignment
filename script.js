@@ -10,8 +10,8 @@ for (var i=0; i < lowercaseAlpha.length; i++){
 var numeric = ["1","2","3","4","5","6","7","8","9","0"];
 var punctuation = ["\"","~","!",",","@","#","$","%","^","&","*","(",")",".","'","/",";",":","<",">","?","`","[","]"];
 
-// Write password to the #password input
 
+// function to generate password
 function generatePassword() {
   var lengthInput = window.prompt("How many characters do you want in your password?");
   var pwLength = parseInt(lengthInput);
@@ -20,6 +20,7 @@ function generatePassword() {
     window.alert("Invalid input. Please insert a number from 8 to 128.");
     return;
   }
+  //different questions to collect user's conditions for their password
   var optionLowercase = window.confirm("Would you like to include lowercase letters in your password?");
   var optionCapital = window.confirm("Would you like to include capital letters in your password?");
   var optionNumbers = window.confirm("Would you like to include numbers in your password?");
@@ -52,8 +53,18 @@ function generatePassword() {
     console.log(randomPW);
   }
   return randomPW;
-  document.getElementById("password").textContent = randomPW;
+  writePassword();
 };
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
