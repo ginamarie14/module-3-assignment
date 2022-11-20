@@ -45,7 +45,8 @@ function generatePassword() {
     usersConditions.push(...punctuation);
   }
   console.log(usersConditions);
-
+  
+  //put it all together to make the password
   var randomPW = [];
   for (var i = 0; i < pwLength ; i++) {
     var elements = usersConditions[Math.floor(Math.random()* usersConditions.length)];
@@ -55,18 +56,7 @@ function generatePassword() {
   var passwordText = document.querySelector("#password");
   //join elements into a single string
   passwordText.value = randomPW.join("")
-
-  //return randomPW;
 };
-
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-
-  
-  
-// }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
