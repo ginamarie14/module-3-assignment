@@ -52,18 +52,20 @@ function generatePassword() {
     randomPW.push(elements);
     console.log(randomPW);
   }
-  return randomPW;
-  writePassword();
+  var passwordText = document.querySelector("#password");
+  //join elements into a single string
+  passwordText.value = randomPW.join("")
+
+  //return randomPW;
 };
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
 
-  passwordText.value = password;
-
-}
+  
+  
+// }
 
 
 // Add event listener to generate button
