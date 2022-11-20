@@ -51,7 +51,8 @@ function generatePassword() {
     randomPW.push(elements);
     console.log(randomPW);
   }
-
+  return randomPW;
+  document.getElementById("password").textContent = randomPW;
 };
 
 // Add event listener to generate button
