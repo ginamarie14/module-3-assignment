@@ -14,4 +14,6 @@ The app will then generate a random password with the parameters given, and this
 
 <img width="670" alt="pass-gen-resultat" src="https://user-images.githubusercontent.com/44861723/202923603-03985c19-8de2-45fb-9924-d379c4582633.png">
 
+This app also uses HTML and CSS.
+
 ##### Find the deployed link here: https://ginamarie14.github.io/module-3-assignment/
